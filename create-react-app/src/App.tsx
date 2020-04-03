@@ -6,7 +6,7 @@ import '@clr/core/global.min.css';
 import '@clr/city/css/bundles/default.min.css';
 
 import './App.css';
-import { CdsButton, CdsTag, CdsBadge, CdsIcon, CdsAlert } from './clarity';
+import { CdsButton, CdsTag, CdsBadge, CdsIcon, CdsAlert, CdsAlertContent } from './clarity';
 
 interface AppProps { }
 interface AppState {
@@ -26,7 +26,10 @@ export default class App extends Component<AppProps, AppState> {
       <main>
         <h1>Clarity in React</h1>
 
-        {this.state.show ? <CdsAlert status="warning" onClosedChange={() => this.setState({ show: false }) }>Hello World</CdsAlert> : ''}
+        {this.state.show ?
+          <CdsAlert status="warning" onClosedChange={() => this.setState({ show: false }) }>
+            <CdsAlertContent>Hello World</CdsAlertContent>
+          </CdsAlert> : ''}
 
         <CdsButton status="success" onClick={() => this.setState({ show: true }) }>Show Alert</CdsButton>
 

@@ -17,6 +17,6 @@
   },
   "dependencies": {
     "@clr/city": "^1.1.0",
-    "@clr/core": "3.0.0"
+    "@clr/core": "3.1.0"
   }
 }
