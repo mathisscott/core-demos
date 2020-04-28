@@ -13,19 +13,19 @@
           <div cds-layout="align:vertical-center align:stretch"><h1 cds-text="title">Clarity Core</h1></div>
         </div>
       </header>
-      <div class="content-container">
+      <div class="content-container with-footer">
         <div class="clr-vertical-nav">
           <div class="nav-content">
-            <a class="nav-link active" href="./index.html"><span class="nav-text">Home</span></a>
-            <a class="nav-link" href="./footer.html"><span class="nav-text">Footer</span></a>
+            <a class="nav-link" href="./index.html"><span class="nav-text">Home</span></a>
+            <a class="nav-link active" href="./footer.html"><span class="nav-text">Footer</span></a>
             <a class="nav-link" href="./reversed.html"><span class="nav-text">Reversed</span></a>
             <a class="nav-link" href="./slack.html"><span class="nav-text">Slack</span></a>
             <div class="nav-divider"></div>
             <a class="nav-link" href="./contrast.html"><span class="nav-text">Compare &amp; Contrast</span></a>
           </div>
         </div>
-        <div class="content-area">
-          <main cds-layout="vertical gap:md">
+        <div class="content-area" cds-layout="vertical p:none">
+          <main cds-layout="vertical gap:md p:md align:stretch">
             <div cds-layout="horizontal gap:sm">
               <div cds-layout="align:vertical-center">
                 <h1 cds-text="display">Layouts and Design Tokens</h1>
@@ -160,6 +160,80 @@
               </div>
             </section>
           </main>
+          <footer cds-layout="align:horizontal-stretch">
+              <div cds-layout="horizontal horizontal-stretch align:vertical-center p-y:sm p-x:md">
+                  <div cds-layout="align:stretch align:vertical-center">
+                      <h3 cds-text="section">Zone Details</h3>
+                  </div>
+                  <div>
+                      <cds-icon shape="two-way-arrows" size="28" direction="left"></cds-icon>
+                  </div>
+              </div>
+              <table class="table" id="footerTable">
+                <tbody>
+                    <tr>
+                        <td cds-layout="p-l:md">Helena, Montana</td>
+                        <td>008954218982511</td>
+                        <td>445.666.777.89</td>
+                        <td>
+                            <div cds-layout="horizontal gap:xs">
+                                <div>
+                                    <cds-icon shape="check" status="success"></cds-icon>
+                                </div>
+                                <div class="nudge">
+                                    Available
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td cds-layout="p-l:md">Park City, Utah</td>
+                        <td>00789425632150009</td>
+                        <td>556.777.888.90</td>
+                        <td>
+                            <div cds-layout="horizontal gap:xs">
+                                <div>
+                                    <cds-icon shape="check" status="success"></cds-icon>
+                                </div>
+                                <div class="nudge">
+                                    Available
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td cds-layout="p-l:md">Peoria, Illinois</td>
+                        <td>0000546987123654</td>
+                        <td>667.888.999.01</td>
+                        <td>
+                            <div cds-layout="horizontal gap:xs">
+                                <div>
+                                    <cds-icon solid shape="warning-standard" status="warning"></cds-icon>
+                                </div>
+                                <div class="nudge">
+                                    Alerted
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td cds-layout="p-l:md">Milwaukee, Wisconsin</td>
+                        <td>012345678787878</td>
+                        <td>778.999.000.12</td>
+                        <td>
+                            <div cds-layout="horizontal gap:xs">
+                                <div>
+                                    <cds-icon shape="check" status="success"></cds-icon>
+                                </div>
+                                <div class="nudge">
+                                    Available
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+              </table>
+          </footer>
         </div>
       </div>
     </div>

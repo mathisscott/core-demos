@@ -13,17 +13,7 @@
           <div cds-layout="align:vertical-center align:stretch"><h1 cds-text="title">Clarity Core</h1></div>
         </div>
       </header>
-      <div class="content-container">
-        <div class="clr-vertical-nav">
-          <div class="nav-content">
-            <a class="nav-link active" href="./index.html"><span class="nav-text">Home</span></a>
-            <a class="nav-link" href="./footer.html"><span class="nav-text">Footer</span></a>
-            <a class="nav-link" href="./reversed.html"><span class="nav-text">Reversed</span></a>
-            <a class="nav-link" href="./slack.html"><span class="nav-text">Slack</span></a>
-            <div class="nav-divider"></div>
-            <a class="nav-link" href="./contrast.html"><span class="nav-text">Compare &amp; Contrast</span></a>
-          </div>
-        </div>
+      <div class="content-container reversed" cds-layout="horizontal align:vertical-stretch">
         <div class="content-area">
           <main cds-layout="vertical gap:md">
             <div cds-layout="horizontal gap:sm">
@@ -161,7 +151,17 @@
             </section>
           </main>
         </div>
-      </div>
+        <div class="clr-vertical-nav">
+            <div class="nav-content">
+              <a class="nav-link" href="./index.html"><span class="nav-text">Home</span></a>
+              <a class="nav-link" href="./footer.html"><span class="nav-text">Footer</span></a>
+              <a class="nav-link active" href="./reversed.html"><span class="nav-text">Reversed</span></a>
+              <a class="nav-link" href="./slack.html"><span class="nav-text">Slack</span></a>
+              <div class="nav-divider"></div>
+              <a class="nav-link" href="./contrast.html"><span class="nav-text">Compare &amp; Contrast</span></a>
+            </div>
+          </div>
+        </div>
     </div>
     <script src="./index.js"></script>
   </body>

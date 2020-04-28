@@ -1,10 +1,73 @@
+@import '../node_modules/@clr/ui/clr-ui.min.css';
 @import '../node_modules/@clr/core/global.min.css';
+@import '../node_modules/@clr/core/styles/module.layout.min.css';
+@import '../node_modules/@clr/core/styles/module.typography.min.css';
+@import '../node_modules/@clr/core/styles/module.tokens.css';
 @import '../node_modules/@clr/city/css/bundles/default.min.css';
 
 body {
   font-family: 'Clarity City', 'Avenir Next', 'Helvetica Neue', Arial, sans-serif;
 }
 
-main {
-  padding: 1.2rem;
+header {
+  background: var(--cds-token-color-action-1000);
+}
+
+header h1 {
+  color: var(--cds-token-color-neutral-50) !important;
+}
+
+.card {
+  margin-top: 0;
+  height: 14rem;
+}
+
+.card-details cds-icon {
+  margin-top: calc(-1 * var(--cds-token-space-size-3));
+}
+
+.card-details cds-badge.plain {
+  --color: var(--cds-token-color-neutral-900);
+  --background: var(--cds-token-color-neutral-200);
+}
+
+footer {
+  background: var(--cds-token-color-neutral-0);
+  width: 100%;
+  border-top: 0.05rem solid var(--cds-token-color-neutral-300);
+}
+
+table.table {
+  border-radius: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  margin-top: 0;
+  border-top-color: var(--cds-token-color-neutral-300);
+}
+
+table.table td {
+  text-align: left;
+}
+
+.nudge {
+  transform: translateY(2px);
+}
+
+.main-container .content-container.reversed .clr-vertical-nav {
+  order: unset;
+}
+
+.slacktainer header {
+  width: 3rem;
+  height: 100%;
+}
+
+.slacktainer-header {
+  border-bottom: 0.05rem solid var(--cds-token-color-neutral-300);
+  width: 100%;
+}
+
+.slacktainer .card {
+  height: 16rem;
 }
