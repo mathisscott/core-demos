@@ -28,6 +28,7 @@ header h1 {
 
 .card-details cds-badge.plain {
   --color: var(--cds-token-color-neutral-900);
+  --border-color: var(--cds-token-color-neutral-200);
   --background: var(--cds-token-color-neutral-200);
 }
 
@@ -91,7 +92,12 @@ body.show-whitespace .icon-container {
   box-shadow: 0.6rem 0 0 #BCE6C1;
 }
 
+body.show-whitespace .card-text .tag-container,
 body.show-whitespace .card-text cds-tag {
   box-shadow: 0 0.6rem 0 #BCE6C1;
+}
+
+body.show-whitespace .card-text .tag-container cds-tag {
+  box-shadow: none;
 }
 
