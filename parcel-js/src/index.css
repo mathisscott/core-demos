@@ -71,3 +71,27 @@ table.table td {
 .slacktainer .card {
   height: 16rem;
 }
+
+.revealer-card {
+  transition: opacity 0.2s ease-in;
+}
+
+body.show-whitespace .card-header,
+body.show-whitespace .card-block,
+body.show-whitespace .card-footer {
+  box-shadow: 0.6rem 0 0 inset #BCE6C1, -0.6rem 0 0 inset #BCE6C1, 0 0.6rem 0 inset #BCE6C1, 0 -0.6rem 0 inset #BCE6C1;
+}
+
+body.show-whitespace .card-header,
+body.show-whitespace .card-block {
+  border-bottom-color: green;
+}
+
+body.show-whitespace .icon-container {
+  box-shadow: 0.6rem 0 0 #BCE6C1;
+}
+
+body.show-whitespace .card-text cds-tag {
+  box-shadow: 0 0.6rem 0 #BCE6C1;
+}
+

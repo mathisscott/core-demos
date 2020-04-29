@@ -5,43 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="./index.css" rel="stylesheet" />
   </head>
-  <body>
-    <div class="main-container">
-      <header class="cds-header" wrap="none">
-        <div cds-layout="horizontal align:vertical-center gap:md p-x:md">
-          <div><cds-icon shape="clarity-logo" size="36"></cds-icon></div>
-          <div cds-layout="align:vertical-center align:stretch"><h1 cds-text="title">ohai</h1></div>
+  <body style="background: #eee">
+    <div cds-layout="grid cols:6" style="width: 1208px; margin: 0 auto">
+        <div cds-layout="col:12 p:md">
+            <a href="./index.html" cds-text="section"><cds-icon size="28" status="info" shape="angle" direction="left" style="margin-top: -3px;"></cds-icon>Back</a>
         </div>
-      </header>
-      <div class="content-container">
-        <div class="clr-vertical-nav">
-          <div class="nav-content">
-            <a class="nav-link active" href="./index.html"><span class="nav-text">Home</span></a>
-            <a class="nav-link" href="./footer.html"><span class="nav-text">Footer</span></a>
-            <a class="nav-link" href="./reversed.html"><span class="nav-text">Reversed</span></a>
-            <a class="nav-link" href="./slack.html"><span class="nav-text">Slack</span></a>
-          </div>
-        </div>
-        <div class="content-area">
-          <main cds-layout="vertical gap:md">
-            <div cds-layout="horizontal gap:sm">
-              <div cds-layout="align:vertical-center">
-                <h1 cds-text="display">Clarity Core Layouts</h1>
-              </div>
-              <div cds-layout="align:vertical-center">
-                <cds-tag status="info">4 items</cds-tag>
-              </div>
-            </div>
-
-            <section>
-              New Zone
-            </section>
-
-            <section cds-layout="grid cols:4 gap:md">
-              <div class="card" cds-layout="vertical align:horizontal-stretch">
+        <div cds-layout="vertical gap:md p:md p-t:lg">
+            <h2 cds-text="display">With Layouts</h2>
+            <div class="card" cds-layout="vertical align:horizontal-stretch" style="height:auto">
                 <div class="card-header" cds-layout="p:sm">
                   <div cds-layout="horizontal align:vertical-center gap:sm">
-                    <div><cds-icon shape="node-group" size="48"></cds-icon></div>
+                    <div class="icon-container"><cds-icon shape="node-group" size="48"></cds-icon></div>
                     <div cds-layout="align:vertical-center align:stretch"><h2 cds-text="title">DevZone</h2></div>
                   </div>
                 </div>
@@ -53,9 +27,9 @@
                           <div cds-text="semibold">Account/region</div>
                           <div><cds-icon shape="factory" size="18"></cds-icon> E2E-EZX-colors-1455</div>
                           <div cds-text="semibold">Compute</div>
-                          <div><cds-badge>2</cds-badge></div>
+                          <div><cds-badge class="plain">2</cds-badge></div>
                           <div cds-text="semibold">Projects</div>
-                          <div><cds-badge>1</cds-badge></div>
+                          <div><cds-badge class="plain">1</cds-badge></div>
                         </div>
                       </div>
                     </div>
@@ -65,138 +39,65 @@
                   <cds-button action="flat">Delete</cds-button>
                 </div>
               </div>
-              <div class="card">
-                <div class="card-header">
-                    Header
-                </div>
-                <div class="card-block">
-                    <div class="card-title">
-                        Block
-                    </div>
-                    <div class="card-text">
-                        ...
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-sm btn-link">Footer Action 1</button>
-                    <button class="btn btn-sm btn-link">Footer Action 2</button>
-                </div>
+              <div cds-layout="grid cols:6 gap:sm">
+                <cds-button block action="outline" onclick="toggleLegacyCard(this)">Show Legacy Card</cds-button>
+                <cds-button block action="outline" onclick="toggleWhitespace(this)">Show Whitespace</cds-button>
               </div>
-              <div class="card">
-                <div class="card-header">
-                    Header
-                </div>
-                <div class="card-block">
-                    <div class="card-title">
-                        Block
-                    </div>
-                    <div class="card-text">
-                        ...
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-sm btn-link">Footer Action 1</button>
-                    <button class="btn btn-sm btn-link">Footer Action 2</button>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header">
-                    Header
-                </div>
-                <div class="card-block">
-                    <div class="card-title">
-                        Block
-                    </div>
-                    <div class="card-text">
-                        ...
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-sm btn-link">Footer Action 1</button>
-                    <button class="btn btn-sm btn-link">Footer Action 2</button>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2>Buttons</h2>
-              <cds-button status="primary">primary</cds-button>
-              <cds-button status="success">success</cds-button>
-              <cds-button status="danger">danger</cds-button>
-              <cds-button status="danger" disabled>disabled</cds-button>
-              <br /><br />
-              <cds-button action="outline">outline</cds-button>
-              <cds-button action="outline" status="success">success</cds-button>
-              <cds-button action="outline" status="danger">danger</cds-button>
-              <cds-button action="outline" disabled>disabled</cds-button>
-              <br /><br />
-              <cds-button action="flat">flat</cds-button>
-              <cds-button action="flat" disabled>flat disabled</cds-button>
-            </section>
-
-            <section>
-              <h2>Tags</h2>
-              <cds-tag readonly status="info">Info</cds-tag>
-              <cds-tag readonly status="success">Success</cds-tag>
-              <cds-tag readonly status="warning">Warning</cds-tag>
-              <cds-tag readonly status="danger">Danger</cds-tag>
-              <cds-tag readonly color="gray"
-                >Austin <cds-badge>1</cds-badge></cds-tag
-              >
-              <cds-tag readonly color="purple"
-                >New York <cds-badge>2</cds-badge></cds-tag
-              >
-              <cds-tag readonly color="blue"
-                >Palo Alto <cds-badge>3</cds-badge>
-              </cds-tag>
-              <cds-tag readonly color="orange"
-                >San Francisco <cds-badge>12</cds-badge></cds-tag
-              >
-              <cds-tag readonly color="light-blue"
-                >Seattle <cds-badge>15</cds-badge></cds-tag
-              >
-            </section>
-
-            <section>
-              <h2>Badge</h2>
-              <cds-badge status="info">2</cds-badge>
-              <cds-badge status="success">3</cds-badge>
-              <cds-badge status="warning">12</cds-badge>
-              <cds-badge status="danger">15</cds-badge>
-              <cds-badge color="gray">1</cds-badge>
-              <cds-badge color="purple">1</cds-badge>
-              <cds-badge color="blue">15</cds-badge>
-              <cds-badge color="orange">2</cds-badge>
-              <cds-badge color="light-blue">3</cds-badge>
-            </section>
-
-            <section>
-              <h2>Icons</h2>
-              <cds-icon size="lg" shape="user"></cds-icon>
-              <cds-icon size="lg" shape="user" badge="info"></cds-icon>
-              <cds-icon size="lg" shape="user" badge="success"></cds-icon>
-              <cds-icon size="lg" shape="user" badge="danger"></cds-icon>
-              <cds-icon
-                size="lg"
-                shape="user"
-                badge="alert-triangle"
-              ></cds-icon>
-              <br /><br />
-              <cds-icon size="lg" shape="user" solid></cds-icon>
-              <cds-icon size="lg" shape="user" solid badge="info"></cds-icon>
-              <cds-icon size="lg" shape="user" solid badge="success"></cds-icon>
-              <cds-icon size="lg" shape="user" solid badge="danger"></cds-icon>
-              <cds-icon
-                size="lg"
-                shape="user"
-                solid
-                badge="alert-triangle"
-              ></cds-icon>
-            </section>
-          </main>
         </div>
-      </div>
+
+        <div class="revealer-card" cds-layout="vertical gap:md p:md p-t:lg" id="legacyCardContainer" style="visibility: hidden; opacity: 0;">
+            <h2 cds-text="display">Without Layouts</h2>
+            <div class="card" style="height: auto">
+                <div class="card-header">
+                  <div class="clr-row">
+                    <div class="clr-col-1 icon-container"><cds-icon shape="node-group" size="48"></cds-icon></div>
+                    <div class="clr-col-11"><h2 cds-layout="m:none">DevZone</h2></div>
+                  </div>
+                </div>
+                <div class="card-block">
+                    <div class="card-text">
+                      <div>
+                        <cds-tag status="info">dev</cds-tag>
+                        <div class="card-details clr-row">
+                          <div class="clr-col-4" cds-text="semibold">Account/region</div>
+                          <div class="clr-col-8"><cds-icon shape="factory" size="18"></cds-icon> E2E-EZX-colors-1455</div>
+                          <div class="clr-col-4" cds-text="semibold">Compute</div>
+                          <div class="clr-col-8"><cds-badge class="plain">2</cds-badge></div>
+                          <div class="clr-col-4" cds-text="semibold">Projects</div>
+                          <div class="clr-col-8"><cds-badge class="plain">1</cds-badge></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                  <cds-button action="outline">Open</cds-button>
+                  <cds-button action="flat">Delete</cds-button>
+                </div>
+              </div>
+        </div>
+
+
     </div>
     <script src="./index.js"></script>
+    <script type="text/javascript">
+        function toggleLegacyCard(btnEl) {
+            const legacyCardEl = document.getElementById("legacyCardContainer");
+            legacyCardEl.style.visibility = legacyCardEl.style.visibility === "hidden" ? "visible" : "hidden";
+            legacyCardEl.style.opacity = legacyCardEl.style.opacity === "0" ? "1" : "0";
+            btnEl.textContent = btnEl.textContent === "Show Legacy Card" ? "Hide Legacy Card" : "Show Legacy Card";
+        }
+
+        function toggleWhitespace(btnEl) {
+            const bodyClasslist = document.body.classList;
+            const whitespaceVisibleClassname = 'show-whitespace';
+            if (bodyClasslist.contains(whitespaceVisibleClassname)) {
+                bodyClasslist.remove(whitespaceVisibleClassname);
+                btnEl.textContent = "Show Whitespace";
+            } else {
+                bodyClasslist.add(whitespaceVisibleClassname);
+                btnEl.textContent = "Hide Whitespace";
+            }
+        }
+    </script>
   </body>
 </html>
